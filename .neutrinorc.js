@@ -1,6 +1,5 @@
 const reactLint = require('@mozilla-frontend-infra/react-lint');
 const reactComponents = require('@neutrinojs/react-components');
-const jest = require('@neutrinojs/jest');
 
 module.exports = {
   use: [
@@ -46,6 +45,5 @@ module.exports = {
       },
     }),
     reactComponents(),
-    jest(),
   ]
 };

@@ -6,4 +6,8 @@ module.exports = {
       backgrounds: false,
     },
   }],
+  framework: {
+    name: '@storybook/react-webpack5',
+    options: {},
+  },
 };

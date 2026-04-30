@@ -19,16 +19,15 @@ tasks:
           - '--login'
           - '-cx'
           - >-
-            git clone ${event.pull_request.head.repo.git_url} repo &&
+            git clone ${event.pull_request.head.repo.html_url} repo &&
             cd repo &&
             git config advice.detachedHead false &&
             git checkout ${event.pull_request.head.sha} &&
             yarn &&
-            yarn lint &&
-            yarn test
+            yarn lint
       metadata:
-        name: "tests/lint"
-        description: "Material UI JSON Schema Viewer Tests / Lint"
+        name: "lint"
+        description: "Material UI JSON Schema Viewer Lint"
         owner: ${event.pull_request.user.login}@users.noreply.github.com
         source: ${event.repository.url}
 

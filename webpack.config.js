@@ -1,3 +1,31 @@
-const neutrino = require('neutrino');
+const path = require('path');
 
-module.exports = neutrino().webpack();
+module.exports = {
+  mode: 'production',
+  entry: './src/components/index.js',
+  output: {
+    path: path.resolve(__dirname, 'build'),
+    filename: 'index.js',
+    library: { type: 'commonjs2' },
+  },
+  externals: [
+    ({ request }, callback) => {
+      if (request && /^[\w@]/.test(request)) {
+        return callback(null, `commonjs ${request}`);
+      }
+      callback();
+    },
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        use: 'babel-loader',
+      },
+    ],
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
+};

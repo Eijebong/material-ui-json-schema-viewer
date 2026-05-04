@@ -40,6 +40,7 @@ function TableLayout({ rows }) {
     <div className={classes.wrapper}>
       {rows.map(({ left, right }, i) => {
         return (
+          // biome-ignore lint/suspicious/noArrayIndexKey: row order is fully determined by the input schema.R ows are never reordered or filtered between renders
           <Fragment key={`row-${i}`}>
             <div className={classNames(classes.cell, classes.left)}>{left}</div>
             <div className={classNames(classes.cell, classes.right)}>

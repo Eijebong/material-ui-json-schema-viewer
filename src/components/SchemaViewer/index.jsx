@@ -27,7 +27,8 @@ function SchemaViewer({ schema, references }) {
    * to which the schema viewer can refer to when expanding a $ref.
    */
   const referenceMap = references.reduce((acc, schema) => {
-    return { ...acc, [schema.$id]: schema };
+    acc[schema.$id] = schema;
+    return acc;
   }, {});
 
   function handleViewToggle() {

@@ -36,6 +36,7 @@ function Markdown({ children, inverse }) {
         { [`${classes.markdown}`]: !inverse },
         { [`${classes.inverse}`]: inverse }
       )}
+      // biome-ignore lint/security/noDangerouslySetInnerHtml: rendering markdown is the purpose of this component
       dangerouslySetInnerHTML={{
         __html: markdown.renderInline(children),
       }}

@@ -237,8 +237,23 @@ function LeftCell({ treeNode, refType, setSchemaTree, references }) {
     expanded: () => setSchemaTree(prev => shrinkRefNode(prev, treeNode)),
   }[refType];
 
+  const isInteractive = refType !== 'none';
+  const interactiveProps = isInteractive
+    ? {
+        onClick: onRefClick,
+        onKeyDown: event => {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            onRefClick();
+          }
+        },
+        role: 'button',
+        tabIndex: 0,
+      }
+    : {};
+
   return (
-    <div key={schemaType} onClick={onRefClick}>
+    <div key={schemaType} {...interactiveProps}>
       <Typography
         component="div"
         variant="subtitle2"

@@ -1,4 +1,5 @@
 import { clone } from 'ramda';
+// biome-ignore lint/style/useNodejsImportProtocol: polyfilled
 import { isAbsolute, dirname, resolve } from 'path';
 import { COMBINATION_TYPES, REF_TYPE, CUSTOM_KEYWORDS } from './constants';
 

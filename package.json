@@ -12,22 +12,20 @@
     "start": "storybook dev -p 6006",
     "build": "webpack --mode production",
     "prepublish": "npm run build",
-    "lint": "eslint --cache --ext mjs,jsx,js src",
+    "lint": "biome lint src",
     "deploy": "storybook build -o storybook && gh-pages --remote upstream -d storybook"
   },
   "devDependencies": {
     "@babel/core": "^7.24.0",
     "@babel/preset-env": "^7.24.0",
     "@babel/preset-react": "^7.24.0",
+    "@biomejs/biome": "^2.4.14",
     "@material-ui/core": "^4.7.1",
     "@storybook/addon-essentials": "^7.6.20",
     "@storybook/react": "^7.6.20",
     "@storybook/react-webpack5": "^7.6.20",
     "babel-loader": "^9.1.3",
-    "eslint": "^6.7.2",
-    "eslint-plugin-react": "^7.34.0",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "gh-pages": "^2.1.1",
+    "gh-pages": "^6.3.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "storybook": "^7.6.20",
@@ -41,9 +39,9 @@
   },
   "dependencies": {
     "classnames": "^2.2.6",
-    "markdown-it": "^10.0.0",
+    "markdown-it": "^14.1.1",
     "mdi-react": "^6.7.0",
     "prop-types": "^15.7.2",
-    "ramda": "^0.26.1"
+    "ramda": "^0.32.0"
   }
 }

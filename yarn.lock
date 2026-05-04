@@ -6667,10 +6667,10 @@ ramda@0.29.0:
   resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.29.0.tgz#fbbb67a740a754c8a4cbb41e2a6e0eb8507f55fb"
   integrity sha512-BBea6L67bYLtdbOqfp8f58fPMqEwx0doL+pAi8TZyp2YWz8R9G8z9x75CZI8W+ftqhFHCpEX2cRnUUXK130iKA==
 
-ramda@^0.26.1:
-  version "0.26.1"
-  resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.26.1.tgz#8d41351eb8111c55353617fc3bbffad8e4d35d06"
-  integrity sha512-hLWjpy7EnsDBb0p+Z3B7rPi3GDeRG5ZtiI33kJhTt+ORCd38AbAIjB/9zRIUoeTbE/AVX5ZkU7m6bznsvrf8eQ==
+ramda@^0.32.0:
+  version "0.32.0"
+  resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.32.0.tgz#b2116807b59b6b177af7a2ad19b14a3653570e96"
+  integrity sha512-GQWAHhxhxWBWA8oIBr1XahFVjQ9Fic6MK9ikijfd4TZHfE2+urfk+irVlR5VOn48uwMgM+loRRBJd6Yjsbc0zQ==
 
 range-parser@^1.2.1, range-parser@~1.2.1:
   version "1.2.1"
